@@ -1,0 +1,73 @@
+<html>
+<head>
+</head>
+
+<body style="background-color:lavender;">
+
+<canvas id="myCanvas2" width="800" height="800" style="border:1px solid #000000;">
+Your browser does not support the HTML canvas tag.
+</canvas>
+
+<canvas id="myCanvas" width="200" height="200" style="border:1px solid #000000;">
+Your browser does not support the HTML canvas tag.
+</canvas>
+
+<a href="..\puslapis.html"> <p><b>Kita puslapio dalis</b></p></a>
+
+<input type="number" oninput="spindulys = this.value;">
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+
+// Create gradient
+var grd = ctx.createLinearGradient(0, 0, 200, 0);
+grd.addColorStop(0, "red");
+grd.addColorStop(1, "white");
+
+// Fill with gradient
+ctx.fillStyle = grd;
+ctx.fillRect(10, 10, 150, 80);
+
+
+
+//Canvas ir javascript sąsaja
+var c2 = document.getElementById("myCanvas2");
+var ctx2 = c2.getContext("2d");
+
+ 
+
+//Kintamųjų deklaracija
+var spindulys = 50;
+
+ 
+
+
+function veikejas(e) {
+    var x = e.clientX;
+      var y = e.clientY;
+    ctx2.strokeStyle = "blue";
+    ctx2.lineWidth = 1;
+    ctx2.beginPath();
+    ctx2.arc(x, y, spindulys, 0, 2 * Math.PI);
+    ctx2.stroke();
+}
+
+ 
+
+ctx2.fillStyle = "pink";
+ctx2.fillRect(0, 0, 800, 800);
+
+ 
+
+veikejas(100, 200);
+
+ 
+
+document.addEventListener("mousemove", veikejas);
+
+ 
+
+</script>
+</body>
+</html>

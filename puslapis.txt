@@ -1,0 +1,17 @@
+<html>
+<head>
+</body>
+
+</script>
+<a href="..\puslapis.html"> kita puslapio dalis </a>
+</ script>
+
+
+
+
+
+
+
+</body>
+</head>
+</html>
